@@ -25,7 +25,7 @@ function main() {
                 const token = result["access"];
                 alert("Login realizado com sucesso!");
                 localStorage.setItem("access", token);
-                window.location.replace("tarefas.html");
+                window.location.replace("../tarefas.html");
             } else {
                 alert("Usuário e/ou senha incorretos!");
             }
