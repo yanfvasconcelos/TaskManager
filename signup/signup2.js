@@ -38,7 +38,7 @@ function main() {
 
             setTimeout(() => {
                 Swal.close();
-                window.location.replace('login.html');
+                window.location.replace('../login/login2.html');
             }, 2000);
         } catch (error) {
             console.error(error);
