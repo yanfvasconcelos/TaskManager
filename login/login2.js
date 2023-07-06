@@ -23,9 +23,17 @@ function main() {
 
             if (response.status === 200) {
                 const token = result["access"];
-                alert("Login realizado com sucesso!");
                 localStorage.setItem("access", token);
-                window.location.replace("../tarefas.html");
+                Swal.fire({
+                    title: 'Login realizado com sucesso',
+                    icon: 'success',
+                    confirmButtonText: 'OK',
+                });
+    
+                setTimeout(() => {
+                    Swal.close();
+                    window.location.replace("../tarefas.html");
+                }, 2000);
             } else {
                 alert("Usuário e/ou senha incorretos!");
             }
