@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager - Creator</title>
+    <link rel="stylesheet" href="tarefas.css">
+    <script defer src="tarefas.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.4/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.4/dist/sweetalert2.min.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h2 class="logo">Logo</h2>
+        <nav class="navigation">
+            <a href="minhastarefas.html">Minhas tarefas</a>
+            <a href="">Meu perfil</a>
+            <button class="btnLogin-popup" onclick="localStorage.clear(); window.location.href = 'site.html'">Sair</button>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <div class="form-box create">
+
+            <h2>Criar Tarefa</h2>
+
+            <form action="#" id="form-task">
+
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="document-text"></ion-icon>
+                    </span>
+                    <input id="descricao" type="text" autocomplete="off" required>
+                    <label for="descricao">Descrição</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="person"></ion-icon>
+                    </span>
+                    <input id="responsavel" type="text" autocomplete="off" required>
+                    <label for="responsavel">Responsável</label>
+                </div>
+
+                <div class="container">
+                    <div class="select-container">
+                        <label for="nivel">Nível: </label>
+                        <select id="nivel" class="select-box">
+                            <option value="1">1 - Fácil</option>
+                            <option value="3">3 - Médio</option>
+                            <option value="5">5 - Difícil</option>
+                            <option value="8">8 - Desfiante</option>
+                        </select>
+                        
+                    </div>
+                    <div class="select-container">
+                        <label for="prioridade">Prioridade: </label>
+                        <select id="prioridade" class="select-box">
+                            <option value="1">1 - Baixa</option>
+                            <option value="2">2 - Médio</option>
+                            <option value="3">3 - Alta</option>
+                        </select>
+                        
+                    </div>
+                    <div class="select-container">
+                        <label for="situacao">Situação: </label>
+                        <select id="situacao" class="select-box">
+                            <option value="NOVA">Nova</option>
+                            <option value="EM ANDAMENTO" disabled>Em andamento</option>
+                            <option value="PENDENTE" disabled>Pendente</option>
+                            <option value="RESOLVIDA" disabled>Resolvida</option>
+                            <option value="CANCELADA" disabled>Cancelada</option>
+                        </select>
+                        
+                    </div>
+                </div>
+                <button type="submit" class="btn">Criar</button>
+            </form>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

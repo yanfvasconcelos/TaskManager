@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager - Minhas Tarefas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.4/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.4/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="minhastarefas.css">
+    <script defer src="minhastarefas.js"></script>
+</head>
+
+<body>
+    <div class="topo">
+        <header>
+            <h2 class="logo">Logo</h2>
+            <nav class="navigation">
+                <a href="tarefas.html">Cadastrar tarefa</a>
+                <a href="">Meu perfil</a>
+                <button class="btnLogin-popup"
+                    onclick="localStorage.clear(); window.location.href = 'site.html'">Sair</button>
+            </nav>
+        </header>
+        </div>
+    <div class="container">
+        <div id="toolbar">
+            <label for="busca" class="sr-only">Buscar</label>
+            <input id="busca" type="text" name="" placeholder="Buscar">
+        </div>
+        <div id="taskList"></div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://kit.fontawesome.com/f63adf5e57.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

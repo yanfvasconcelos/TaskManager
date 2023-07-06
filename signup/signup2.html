@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Task Manager</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.4/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.4/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="../signup/signup2.css">
+    <script defer src="../signup/signup2.js"></script>
+</head>
+
+<body>
+    
+    <header>
+        <h2 class="logo">Logo</h2>
+        <nav class="navigation">
+            <a href="../site.html">Home</a>
+            <a href="../site.html#services">Serviços</a>
+            <a href="../site.html#about-us">Sobre</a>
+            <a href="../site.html#footer">Contatos</a>
+            <button class="btnLogin-popup" onclick="window.location.href = 'login2.html';">Login</button>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <div class="form-box register">
+            <h2>Signup</h2>
+            <form action="#" id="form-signup">
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="person"></ion-icon>
+                    </span>
+                    <input id="usuario" type="text" autocomplete="off" required>
+                    <label>Usuário</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+                    <input id="email" type="email" autocomplete="off" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                    <input id="senha" type="password" required>
+                    <label>Senha</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                    <input id="confirmar-senha" type="password" required>
+                    <label>Confirmar senha</label>
+                </div>
+                <button type="submit" class="btn">Cadastrar</button>
+                <div class="login-register">
+                    <p>Já tem uma conta? <a href="../login/login2.html" class="login-link">Faça login</a></p>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
