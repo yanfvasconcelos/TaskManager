@@ -110,6 +110,7 @@ input, select {
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
+    width: 100%;
 }
 
 #toolbar input{
@@ -118,7 +119,7 @@ input, select {
     border-radius: 8px;
     background-color: #fff;
     border: 0;
-    width: 40%;
+    width: 500px;
     color: #162938;
     font-size: 16px;
 }
