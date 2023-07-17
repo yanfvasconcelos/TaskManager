@@ -121,40 +121,31 @@ function fetchTasks() {
     });
 }
 
-function searchTask() {
-  const filterElement = document.querySelector("#toolbar input");
-  const allCards = document.querySelectorAll(".card");
+function filterCards() {
+  const filterText = this.value.toLowerCase();
+  const allCards = document.querySelectorAll(".card")
 
-  filterElement.addEventListener("input", filterCards);
+  if (filterText != "") {
+    for (let card of allCards) {
+      let title = card.querySelector("h2").textContent.toLowerCase();
 
-  function filterCards() {
-    const filterText = filterElement.value.toLowerCase();
-
-    if (filterText != "") {
-      for (let card of allCards) {
-        let title = card.querySelector("h2").textContent.toLowerCase();
-
-        if (!title.includes(filterText)) {
-          card.style.display = "none";
-
-        } else {
-          card.style.display = "block";
-
-        }
-      }
-    } else {
-      for (let card of allCards) {
+      if (!title.includes(filterText)) {
+        card.style.display = "none";
+      } else {
         card.style.display = "block";
       }
     }
+  } else {
+    for (let card of allCards) {
+      card.style.display = "block";
+    }
   }
 }
-
-
 document.addEventListener("DOMContentLoaded", function () {
 
   // Chame a função fetchTasks para buscar e exibir as tarefas ao carregar a página
   fetchTasks();
-});
 
-searchTask()
+  const filterElement = document.querySelector("#busca");
+  filterElement.addEventListener("input", filterCards)
+});
